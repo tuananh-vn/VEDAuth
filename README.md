@@ -8,6 +8,46 @@
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+**`GCVETVHelpManager`** - a `Singleton` that support a float button.
+
+**Init Singleton:**
+```objective-c
+GCVETVHelpManager *floatManager = [GCVETVHelpManager sharedManager];
+```
+
+**Init Singleton with frame:**
+```objective-c
+GCVETVHelpManager *floatManager = [GCVETVHelpManager sharedManagerWithFrame:CGRectMake(100, 100, 50, 50)];
+```
+**Set appid, access_token, serverurl, :**
+```objective-c
+    floatManager.appid = @"";
+    floatManager.tokenID = @"";
+    floatManager.serverURL = @"";
+    floatManager.extraData = [[NSDictionary alloc] init];
+```
+**Set custom salt :**
+```objective-c
+    floatManager.salt = @"";
+```
+**Set redirect URL :**
+```objective-c
+    floatManager.redirectURL = @"";
+```
+
+**Set float button image:**
+```objective-c
+    [floatManager setHelpImage:[UIImage imageNamed:@""]];
+```
+
+
+**Show/Hide Float Button:**
+```objective-c
+    [floatManager showHelp];
+    
+    [floatManager hideHelp];
+```
+
 
 ## Requirements
 
