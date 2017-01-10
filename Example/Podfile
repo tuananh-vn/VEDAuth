@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'VEDAuth_Example' do
-  pod 'VEDAuth', :path => '../'
+    pod 'VEDAuth', :path => '../'
 
   target 'VEDAuth_Tests' do
     inherit! :search_paths

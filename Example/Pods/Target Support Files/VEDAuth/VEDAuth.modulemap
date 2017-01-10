@@ -1,0 +1,6 @@
+framework module VEDAuth {
+  umbrella header "VEDAuth-umbrella.h"
+
+  export *
+  module * { export * }
+}

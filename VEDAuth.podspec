@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'VEDAuth'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of VEDAuth.'
+  s.summary          = 'A web browser module for your apps.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,26 +17,25 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description  = <<-DESC
+                   KINWebBrowser is a web browser module for your apps. Powered by WKWebView on iOS 8. Backwards compatible with iOS 7 using UIWebView. KINWebBrowser offers the simplest way to add a web browser to your apps.
+                   DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/VEDAuth'
+  s.homepage         = 'https://github.com/tuananh-vn/VEDAuth'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'tuananh' => 'viking8490@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/VEDAuth.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/tuananh-vn/VEDAuth.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
 
   s.source_files = 'VEDAuth/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'VEDAuth' => ['VEDAuth/Assets/*.png']
-  # }
+  s.resources = 'VEDAuth/Assets/*.png'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'TUSafariActivity', '1.0.4'
+  s.dependency 'ARChromeActivity', '1.0.5'
 end
