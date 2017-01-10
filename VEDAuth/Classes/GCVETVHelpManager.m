@@ -122,9 +122,17 @@
     
 }
 - (void)webBrowserViewControllerWillDismiss:(KINWebBrowserViewController*)viewController {
+    [self deleteCookies];
     [self showHelp];
 }
 
+- (void) deleteCookies {
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (NSHTTPCookie *cookie in [storage cookies]) {
+        [storage deleteCookie:cookie];
+    }
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 #pragma Encode data
 -(NSString *) createChecksumWithData: (NSString*) data andStamp: (NSString *) stamp {
@@ -159,7 +167,6 @@
     } else {
         [request setHTTPMethod:@"GET"];
     }
-    [request setHTTPShouldHandleCookies:NO];
     return request;
 }
 

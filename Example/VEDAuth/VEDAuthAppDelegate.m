@@ -18,7 +18,7 @@
     GCVETVHelpManager *floatManager = [GCVETVHelpManager sharedManager];
     floatManager.salt = @"7d5f8c171b172d2b9c6b3407bc1c810a";
     floatManager.serverURL = @"http://hotro.garena.vn/app-auth";
-    floatManager.tokenID = @"76ffc3d38840204cee1b7f214e61b6d45ed32d45a729b48f244bd691f05cf721";
+    floatManager.tokenID = @"76ffc3d38840204cee1b7f214e61b6d4e05761546f12aa1db0775c6820274ed2";
     floatManager.redirectURL =@"https://hotro.garena.vn/gui-yeu-cau?embedded=1";
     [floatManager showHelp];
     return YES;
