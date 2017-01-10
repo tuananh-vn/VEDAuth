@@ -159,7 +159,7 @@
     } else {
         [request setHTTPMethod:@"GET"];
     }
-
+    [request setHTTPShouldHandleCookies:NO];
     return request;
 }
 
